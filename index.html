@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mozi időzítve</title>
+  </head>
+  <body>
+    <h1>Vetítés hamarosan...</h1>
+    <video id="film" width="720" controls>
+      <source src="https://drive.google.com/file/d/1SNhmitRPFTCE1czbNMGeewac7AMGh64F/preview">
+    </video>
+
+    <script>
+      const startTime = new Date("2025-06-04T16:5:59"); //
+      const now = new Date();
+      const video = document.getElementById("film");
+
+      if (now >= startTime) {
+        video.play();
+      } else {
+        const delay = startTime - now;
+        setTimeout(() => {
+          video.play();
+        }, delay);
+      }
+    </script>
+  </body>
+</html>
+﻿
+
+
+
+
+
+
+
+
